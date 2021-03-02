@@ -18,8 +18,15 @@ int flip(int m, int n)
     return (m ^ (1 << (n - 1))); 
 } 
 
-int query(int m,int n)
+int query(int num)
 {
-
+    if((num & 1)==1)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+    
 }
-
