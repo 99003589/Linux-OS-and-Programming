@@ -32,6 +32,10 @@ int main() {
   printf("flipping %d th of %d is %d \n",k,num,flip(num,k));
   printf("query %d th of %d is %d \n",num,query(num));
 
+  printf("sum of 2,10,20=%d\n",vsum(2,10,20)); 
+  printf("sum of 3,10,12,18=%d\n",vsum(3,10,12,18));
+  printf("sum of 4,10,12,18,20=%d\n",vsum(4,10,12,18,20));
+
 
 
   return 0;
