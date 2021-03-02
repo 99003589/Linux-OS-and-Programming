@@ -30,7 +30,7 @@ int main() {
   printf("setting %d th of %d is %d \n",k,num,set(num,k));
   printf("resetting %d th of %d is %d \n",k,num,reset(num,k));
   printf("flipping %d th of %d is %d \n",k,num,flip(num,k));
-  printf("query %d th of %d is %d \n",k,num,flip(num));
+  printf("query %d th of %d is %d \n",num,query(num));
 
 
 
