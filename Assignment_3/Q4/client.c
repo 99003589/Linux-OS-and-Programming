@@ -18,7 +18,7 @@ int main()
 		exit(1);
 	}
 	char buf[8192];
-	int maxlen=256,prio;
+	int maxlen=128,prio;
 	mbytes=mq_receive(mqid,buf,maxlen,&prio);
 	if(mbytes<0)
 	{
@@ -29,8 +29,8 @@ int main()
 	printf("receive msg from sender:%s,nbytes=%d,prio=%d\n",buf,mbytes,prio);
 	mqd_t mqid2;
 	struct mq_attr attr2;
-	attr2.mq_msgsize=256;
-	attr2.mq_maxmsg=20;
+	attr2.mq_msgsize=128;
+	attr2.mq_maxmsg=10;
 	mqid2=mq_open("/mque2",O_WRONLY|O_CREAT,0666,&attr2);
 	for(int counter=0;buf[counter]!=NULL;counter++)
     {
