@@ -6,11 +6,11 @@ server: server.c
 client: client.c 
 	gcc -o client.out client.c -lrt
 	
-client:
+runclient:
 	./client.out
 
-runsol4send:
-	./client.out
+runserver:
+	./server.out
 
 clean:
 	rm -rf *.out *.o
