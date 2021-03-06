@@ -1,4 +1,4 @@
-include <pthread.h>
+#include <pthread.h>
 #include <semaphore.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -31,7 +31,7 @@ void *producer(void *pno)
         /* put value item into the buffer */
         buffer[inp] = item;
         printf("Producer %d: Insert Item %d at %d\n", *((int *)pno),buffer[inp],inp);
-        in = (inp + 1) % BufferSize;     
+        inp = (inp + 1) % BufferSize;     
         sem_post(&full);
      }
     }
