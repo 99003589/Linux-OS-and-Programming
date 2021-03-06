@@ -16,12 +16,12 @@ int main()
 	if(ret==0)
 	{
 		
-        int k;
-        char str[20];
+        int l;
+        char str[10];
         scanf("%s",str);
-        k=execl("/usr/bin/pwd",str,NULL);
+        l=execl("/usr/bin/pwd",str,NULL);
         
-		if(k<0)
+		if(l<0)
 		{
 			perror("execl");
 			exit(1);
